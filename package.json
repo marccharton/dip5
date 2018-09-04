@@ -1,0 +1,19 @@
+{
+  "name": "dip5",
+  "version": "1.0.0",
+  "description": "dive into P5.js",
+  "main": "sketch.js",
+  "scripts": {
+    "start": "cd 02/ && browser-sync start --server -f -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kram47/dip5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kram47/dip5/issues"
+  },
+  "homepage": "https://github.com/kram47/dip5#readme"
+}
