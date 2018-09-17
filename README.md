@@ -10,3 +10,6 @@ Based on p5.js example : https://p5js.org/examples/structure-width-and-height.ht
 
 ## 03 Glitch Lines Generator
 Based on p5.js example : https://p5js.org/examples/motion-linear.html
+
+## 04 Discovery of push/pop functions
+ - Played with example : https://p5js.org/examples/simulate-spirograph.html
