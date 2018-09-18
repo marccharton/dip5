@@ -13,3 +13,7 @@ Based on p5.js example : https://p5js.org/examples/motion-linear.html
 
 ## 04 Discovery of push/pop functions
  - Played with example : https://p5js.org/examples/simulate-spirograph.html
+
+## 05 Spirograph
+ - Played with example : https://p5js.org/examples/simulate-spirograph.html
+ - Init of a spirograph generator
