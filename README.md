@@ -14,12 +14,14 @@ Based on p5.js example : https://p5js.org/examples/motion-linear.html
 ## 04 Discovery of push/pop functions
  - Played with example : https://p5js.org/examples/simulate-spirograph.html
 
-## 05 Spirograph
+## 05 Spirograph #1
  - Played with example : https://p5js.org/examples/simulate-spirograph.html
  - Init of a spirograph generator
 
-## 06 Spirograph
+## 06 Spirograph #2
  - Spirograph class
  - New best practice ?
  	- Encapsulation of p5 context (see https://www.youtube.com/watch?v=Su792jEauZg)
  	- It's cleaner but really heavy !
+
+## 07 Spirograph #3
