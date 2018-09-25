@@ -19,3 +19,7 @@ Based on p5.js example : https://p5js.org/examples/motion-linear.html
  - Init of a spirograph generator
 
 ## 06 Spirograph
+ - Spirograph class
+ - New best practice ?
+ 	- Encapsulation of p5 context (see https://www.youtube.com/watch?v=Su792jEauZg)
+ 	- It's cleaner but really heavy !
