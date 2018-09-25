@@ -8,6 +8,7 @@
 class Spirograph {
   /**
   * @param {Object} p5                 - p5 object context
+  * @param {int}    circleNumber       - number of circles to draw
   * @param {Array}  circleList         - an array to hold all the current angles
   * @param {bool}   isTraceMode        - are we tracing?
   * @param {color}  backgroundColor    - mh well... the color of the... background ? maybe...
@@ -22,7 +23,8 @@ class Spirograph {
 
   constructor(p5) {
     this.p5 = p5;
-    this.circleList = new Array(10);
+    this.circleNumber = 10;
+    this.circleList = new Array(this.circleNumber);
     this.isTraceMode = false;
     this.backgroundColor = this.p5.color(240);
     this.designModePenColor = this.p5.color(150);
@@ -30,15 +32,21 @@ class Spirograph {
     this.minSizeToTrace = 0;
     this.fund = 0.015;
     this.ratio = 1;
+  }
 
-    // cursors
-    this.backgroundColorCursor = p.createSlider(0, 255);
-    this.backgroundColorCursor.position(0,20);
+  initCursors(canvasWidth) {
+    var height = 100;
+    this.backgroundColorCursor = this.p5.createSlider(0, 255, 240, 50);
+    this.backgroundColorCursor.position(canvasWidth + 100, height);
+
+    height += 50;
+    this.circleNumberCursor = this.p5.createSlider(1, 20, 10, 1);
+    this.circleNumberCursor.position(canvasWidth + 100, height);
   }
 
   init() {
+    this.initCursors(this.p5.width);
     this.baseRadius = this.p5.height / 4;
-    this.p5.background(this.backgroundColor);
 
     for (var i = 0; i < this.circleList.length; i++) {
       this.circleList[i] = this.p5.PI;
@@ -60,9 +68,9 @@ class Spirograph {
     this.p5.push(); // start a transformation matrix
     this.p5.translate(this.p5.width/2, this.p5.height/2); // move to middle of screen
 
-    for (var i = 0; i < this.circleList.length; i++) {
-      var erad = 0; // radius for small "point" within circle... this is the 'pen' when tracing
-      var radius = this.rotateCircle(i);
+    for (let i = 0; i < this.circleList.length; i++) {
+      let erad = 0; // radius for small "point" within circle... this is the 'pen' when tracing
+      let radius = this.rotateCircle(i);
       this.drawCircle(radius, i);
       this.drawLittleCircle(radius, i, erad);
       this.p5.translate(0, radius); // move into position for next sine
@@ -73,7 +81,7 @@ class Spirograph {
   }
 
   rotateCircle(i) {
-    var radius = this.baseRadius / (i+ this.circleSizeStep); // radius for circle itself
+    let radius = this.baseRadius / (i+ this.circleSizeStep); // radius for circle itself
     this.p5.rotate(this.circleList[i]); // rotate circle
     return radius;
   }
@@ -116,6 +124,24 @@ class Spirograph {
 
   updateParams() {
     this.backgroundColor = this.backgroundColorCursor.value();
+
+    this.updateCircleList();
+  }
+
+  updateCircleList(){
+    let circleNumberValue = this.circleNumberCursor.value();
+
+    if (circleNumberValue !== this.circleList.length)
+    {
+      if (circleNumberValue < this.circleList.length) {
+        this.circleList.splice(circleNumberValue);
+      }
+      else {
+        for (let i = 0; i < circleNumberValue - this.circleList.length ; i++) {
+          this.circleList.push(this.p5.PI);
+        }
+      }
+    }
   }
 
 }

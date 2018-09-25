@@ -6,8 +6,6 @@ var mysketch = function(p){
   p.setup = function() {
     p.createCanvas(700, 600);
     spiro.init();
-    
-    //curseur.value()
   }
 
   p.draw = function() {
