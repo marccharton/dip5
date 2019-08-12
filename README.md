@@ -25,3 +25,11 @@ Based on p5.js example : https://p5js.org/examples/motion-linear.html
  	- It's cleaner but really heavy !
 
 ## 07 Spirograph #3
+
+## 08 clock
+
+## 09 transformations
+
+## 10 node server
+
+## 11 sound
