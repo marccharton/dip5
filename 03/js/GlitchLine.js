@@ -1,6 +1,13 @@
+/*
+* @Author: OMAO
+* @Date:   2018-09-05 08:17:16
+* @Last Modified by:   OMAO
+* @Last Modified time: 2019-08-05 17:34:15
+*/
+
 class GlitchLine {
-	
-	constructor(color, position, speed) {
+
+	constructor(color, position, speed, thickness) {
 		this.color = color;
 		this.positionStart = position;
 		this.positionEnd = position;
@@ -16,10 +23,10 @@ class GlitchLine {
 		this.positionStart = this.positionStart - speed;
 		this.positionEnd = this.positionEnd - speed;
 
-	  if (this.positionStart < 0) { 
-	    this.positionStart = height; 
-	    this.positionEnd = height; 
-	  } 
+	  if (this.positionStart < 0) {
+	    this.positionStart = height;
+	    this.positionEnd = height;
+	  }
 	}
 
 	glitchMove(distance) {
