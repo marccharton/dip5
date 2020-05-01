@@ -42,3 +42,7 @@ workshop about reaction/diffusion algorithm : [report](http://bit.ly/aadn-p2p-re
  - test performance of a drawing based on image for : [this project](https://github.com/marccharton/gringe-stunted-rubber/tree/master/03.mars%20-%20absolute%20communication)
  - based on this tutotial : [P_4_3_2_01](http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_3_2_01)
 
+## 14 - yeoman generator 
+
+ - test of [p5-generator](https://github.com/pflannery/p5-yeoman-generator) yeoman scaffold. 
+
